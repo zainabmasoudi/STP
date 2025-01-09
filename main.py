@@ -8,12 +8,24 @@ Version: 1.0
 Description: This is the main.py script, which aims to call
 functions from other modules
 License: GPLv3
-Dependencies: paramika
+Dependencies: telnetlib
 ================================================================
 """
-import source.stp_doc as STP_Doc
-import source.stp_mitigit as STP_Mit
-from mypaths import ssh_pass as ssh_settings
+from mypaths import telnet_pass as telnt
+import src.stp_status as staus
+import src.stp_mitigate as mitg
 
-Check_STP = STP_Doc.stp_staus(ssh_settings.SSH["ip_address"], ssh_settings.SSH["username"], ssh_settings.SSH["password"])
-STP_Mitigate = STP_Mit.stp_mitigate(ssh_settings.SSH["ip_address"], ssh_settings.SSH["username"], ssh_settings.SSH["password"], ssh_settings.SSH["port"])
+def main():
+    host = telnt["HOST"]
+    password = telnt["password"]
+    enable_password = telnt["enable_password"]
+    port = telnt["port"]
+
+    # Call the function
+    stp_status_output = staus.stp_status(host, password, enable_password)
+    print(stp_status_output)
+    stp_mitigate_output = mitg.stp_mitigate(host, password, enable_password, port)
+    print(stp_mitigate_output)
+
+if __name__ == "__main__":
+    main()

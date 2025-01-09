@@ -12,7 +12,7 @@ echo ******************************
 echo *** press [ctrl][c] to exit or any key to continue ***
 pause
 set /p Project_Name=Enter the name of the project, then press [return] 
-echo Creating %Project_Name_Name% 
+echo Creating %Project_Name% 
 mkdir %Project_Name%
 cd %Project_Name%
 echo > READEME.md
@@ -22,6 +22,7 @@ mkdir templates
 mkdir src
 mkdir tests
 mkdir docs
+mkdir images
 echo > settings/__init__.py
 echo > src/__init__.py
 echo > tests/__init__.py
