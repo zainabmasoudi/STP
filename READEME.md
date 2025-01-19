@@ -21,8 +21,6 @@ __directory_automation.bat__ script file is written to automate the process of f
 3. __settings:__ Stores switch related information (e.g., username, password and IP).
 4. __src:__ Includes the main Python modules to connect with switch.
 5. __templates:__ holds on project general header style.
-6. __tests:__ Contains the *pylint* test result.
-7. __images:__ Contains the screenshot of tested script in gns3 
 ### Python Modules Overview
 1. ``stp_status.py``: Establish an ssh connection to a cisco switch and display the STP status.
 2. ``stp_mitigate.py``: Connects to the switches and applies mitigation policy by disabling extra switch port to enhance network stability.
