@@ -24,11 +24,11 @@ __directory_automation.bat__ script file is written to automate the process of f
 6. __tests:__ Contains the *pylint* test result.
 7. __images:__ Contains the screenshot of tested script in gns3 
 ### Python Modules Overview
-1. ``stp_doc.py``: Establish an ssh connection to a cisco switch and display the STP status.
+1. ``stp_status.py``: Establish an ssh connection to a cisco switch and display the STP status.
 2. ``stp_mitigit.py``: Connects to the switches and applies mitigation policy by disabling extra switch port to enhance network stability.
-3. ``main.py``: The central script that imports and call functions from __stp_doc.py__ and __stp_mitigate.py__ to run the entire process.
+3. ``main.py``: The central script that imports and call functions from __stp_status.py__ and __stp_mitigate.py__ to run the entire process.
 ### Testing and Quality Assurance
- 1. __Pylint:__ The pylint was run to check the quality of the code. Some issues were identified both in the stp_doc.py and stp_mitigit.py modules (e.g., non-standard variable names and whitespace errors).
+ 1. __Pylint:__ The pylint was run to check the quality of the code. Some issues were identified both in the stp_status.py and stp_mitigit.py modules (e.g., non-standard variable names and whitespace errors).
  2. __Unittest:__ The unittest is used to make sure that every piece of our project is working properly.
 
 ## Project Conclusion 
