@@ -5,7 +5,7 @@
 
 @echo off
 cls
-title dir_Automation 
+title directory_automation 
 echo ******************************
 echo creates directories and files as automatically
 echo ******************************
